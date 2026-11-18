@@ -85,6 +85,15 @@ figcaption{padding-top:.65rem;font-size:.79rem;color:var(--muted);line-height:1.
 .office-copy>p:not(.section-lead){color:var(--muted)}
 .office-layout img{width:100%;aspect-ratio:1.2;object-fit:cover}
 .office-layout figcaption{max-width:45ch}
+/* Team portraits inherit the office palette and open layout. */
+.contact-team{margin-bottom:clamp(3rem,5vw,5rem)}
+.team-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem var(--gap);padding:0;margin:2rem 0 0;list-style:none}
+.team-member{display:grid;grid-template-columns:6.5rem minmax(0,1fr);align-items:start;gap:1.25rem;border-top:1px solid var(--line);padding-top:1.25rem}
+.team-portrait{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;background:var(--tint)}
+.team-member h4{margin:0;font-size:1.2rem;font-weight:400;line-height:1.35;letter-spacing:-.01em;text-wrap:balance}
+.team-role{font-size:.8rem;color:var(--accent);margin-top:.2rem}
+.team-bio{font-size:.94rem;color:var(--muted);margin-top:.7rem;max-width:45ch}
+
 .contact-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--gap)}
 .contact-heading{font-size:clamp(1.75rem,2.8vw,2.4rem);line-height:1.25;letter-spacing:-.025em}
 .contact-text>p:not(.contact-heading){color:var(--muted);max-width:45ch;margin-top:1.3rem}
@@ -171,6 +180,8 @@ dialog::backdrop{background:rgba(20,29,33,.88)}
   .filters{gap:.2rem 1.2rem}
   .office-layout{grid-template-columns:minmax(0,1fr);gap:2rem}
   .office-layout img{aspect-ratio:1.5}
+  .team-list{grid-template-columns:minmax(0,1fr);gap:1.5rem;margin-top:1.5rem}
+  .team-member{grid-template-columns:6rem minmax(0,1fr);gap:1rem}
   .contact-heading{font-size:2rem}
   .contact-layout{gap:2.25rem}
   .footer{align-items:start;flex-direction:column;gap:.6rem}
